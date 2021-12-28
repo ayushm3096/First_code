@@ -1,15 +1,15 @@
 #include <ESP8266WiFi.h> // ESP wifi server header file
-#include <WiFiClient.h>
-#include <ESP8266WebServer.h>
+#include <WiFiClient.h> // Header file for wifi client 
+#include <ESP8266WebServer.h> // header file for ESP8266 Server
 #include <ESP8266mDNS.h>
-#include <Adafruit_ADS1X15.h>
+#include <Adafruit_ADS1X15.h> // ADS 1115 file
 WiFiClient client;
 uint8_t i2c_address_of_ADC1 = 0x48;
 uint8_t i2c_address_of_ADC2 = 0x49;
 Adafruit_ADS1115 adc1, adc2, adc3, adc4; 
-const char* ssid ="Vinod";
-const char* password = "archana6887";
-const char* host = "192.168.100.3";
+const char* ssid ="Vinod"; // wifi user name
+const char* password = "archana6887";// wifi passowrd
+const char* host = "192.168.100.3";// ip address
 float voltage1 = 0; // used to store voltage value
 float voltage2 = 0;
 float voltage3 = 0;
