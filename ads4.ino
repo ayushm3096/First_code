@@ -1,19 +1,19 @@
-#include <ESP8266WiFi.h>
-#include <WiFiClient.h>
-#include <ESP8266WebServer.h>
-#include <ESP8266mDNS.h>
-#include <Adafruit_ADS1X15.h>
-WiFiClient client;
-uint8_t i2c_address_of_ADC1 = 0x48;
-uint8_t i2c_address_of_ADC2 = 0x49;
-Adafruit_ADS1115 adc1, adc2, adc3, adc4; 
-const char* ssid ="Vinod";
-const char* password = "archana6887";
-const char* host = "192.168.100.3";
-float voltage1 = 0; // used to store voltage value
-float voltage2 = 0;
-float voltage3 = 0;
-float voltage4 = 0;
+#include <ESP8266WiFi.h> // ESP WiFi header file 
+#include <WiFiClient.h> // Wifi Header file
+#include <ESP8266WebServer.h> // ESP  server header file  
+#include <ESP8266mDNS.h> 
+#include <Adafruit_ADS1X15.h> // 16 bit ADC header file   
+WiFiClient client; // Wifi Client declaration
+uint8_t i2c_address_of_ADC1 = 0x48; // I2C Address of first ADS1115
+uint8_t i2c_address_of_ADC2 = 0x49; // I2C Address of Second ADS1115
+Adafruit_ADS1115 adc1, adc2, adc3, adc4; // Declaration of ADS parameter  
+const char* ssid ="Vinod"; // wifi name
+const char* password = "archana6887"; // wifi passsword
+const char* host = "192.168.100.3"; //ip address 
+float voltage1 = 0; // used to store voltage 1  value
+float voltage2 = 0; // used to store voltage 2 value
+float voltage3 = 0; // used to store voltage 3 value
+float voltage4 = 0; // used to store voltage 4 value
 float Radjust = 0.066478076; // Voltage divider factor ( R2 / R1+R2 )
 float vbat1 = 0; // For Battery No.1
 float vbat2 = 0; //For Battery No.2
@@ -23,9 +23,9 @@ float BATT1 = 0; // For Battery No.1
 float BATT2 = 0; //For Battery No.2
 float BATT3 = 0; // For Battery No.3
 float BATT4 = 0; // For Battery No.4
-float SOCt=0;
-float Total_stack = 0;
-int sensitivity = 185;//185,66
+float SOCt=0; // total SOC of battery stack 
+float Total_stack = 0; //  total battery voltage 
+int sensitivity = 185;//185,66 current sensor 
 int adcValue= 0;
 int offsetVoltage = 2500;
 double adcVoltage = 0;
