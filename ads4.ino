@@ -126,19 +126,19 @@ SOCt = ((vbat4-46.04)/5.52)*100;
            {
               SOCt=SOCt;
            }
-  Serial.print("BATT1: ");
-  Serial.println(BATT1);
-  Serial.print("BATT2: ");
+  Serial.print("BATT1: "); // Serial print of Battery 1 voltage
+  Serial.println(BATT1); 
+  Serial.print("BATT2: "); // Serial print of Battery 2 voltage
   Serial.println(BATT2);
-  Serial.print("BATT3: ");
+  Serial.print("BATT3: "); // Serial print of Battery 3 voltage
   Serial.println(BATT3);
-  Serial.print("BATT4: ");
+  Serial.print("BATT4: "); // Serial print of Battery 4 voltage
   Serial.println(BATT4);
-  Serial.println("TotalVoltage");
-  Serial.println(vbat4);
-  Serial.println("ChargeRemaining");
-  Serial.println(SOCt);
-  Serial.println("Current");
+  Serial.println("TotalVoltage"); // Serial print of Total Stack voltage
+  Serial.println(vbat4); 
+  Serial.println("ChargeRemaining");// Serial print of Remaining charge
+  Serial.println(SOCt); 
+  Serial.println("Current");// Serial print of Current value
   Serial.println(currentValue);
   
   
